@@ -19,10 +19,10 @@ public class usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Integer idUsuario; 
-    String userName; 
-    String password; 
+    String username; 
+    String passwords; 
     String email;
-    String sesionactive;
-    Integer persona_idPersona2; 
+    String sessionactive;
+    Integer persona_idpersona2; 
     String status; 
 }
