@@ -1,10 +1,7 @@
 
 package com.backend.demo.modelo;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,11 +15,14 @@ import lombok.ToString;
 public class usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Integer idUsuario; 
-    String userName; 
-    String password; 
-    String email;
-    String sesionactive;
-    Integer persona_idPersona2; 
-    String status; 
+
+    @Column(name="idusuario")
+
+    private Integer idusuario;
+    private String username;
+    private String passwords;
+    private String email;
+    private String sessionactive;
+    private Integer persona_idpersona2;
+    private String status;
 }
