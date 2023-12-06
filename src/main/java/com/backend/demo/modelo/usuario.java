@@ -15,7 +15,7 @@ import lombok.ToString;
 public class usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-<<<<<<< HEAD
+
 
     @Column(name="idusuario")
 
@@ -26,13 +26,5 @@ public class usuario {
     private String sessionactive;
     private Integer persona_idpersona2;
     private String status;
-=======
-    Integer idUsuario; 
-    String username; 
-    String passwords; 
-    String email;
-    String sessionactive;
-    Integer persona_idpersona2; 
-    String status; 
->>>>>>> c72664650fa5215e46e5a34c37d831f06f81709a
+
 }
