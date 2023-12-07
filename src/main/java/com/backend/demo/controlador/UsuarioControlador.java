@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 public class UsuarioControlador {
 
-    private final usuarioRepositorio UsuarioRespositorio;
+    private  final usuarioRepositorio UsuarioRespositorio;
 
     private static final Logger logger =
             LoggerFactory.getLogger(UsuarioControlador.class);
@@ -39,7 +39,5 @@ public class UsuarioControlador {
         logger.info("Usuarios Obtenidos");
         return usuarios;
     }
-
-
     
 }

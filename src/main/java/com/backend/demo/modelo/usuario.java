@@ -15,10 +15,7 @@ import lombok.ToString;
 public class usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-
     @Column(name="idusuario")
-
     private Integer idusuario;
     private String username;
     private String passwords;

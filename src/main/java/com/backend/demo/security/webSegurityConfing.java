@@ -25,12 +25,14 @@ public class webSegurityConfing {
         jwtAuthenticationFilter.setAuthenticationManager(authManager);
         jwtAuthenticationFilter.setFilterProcessesUrl("/login");
         return http
+                .cors()
+                .and()
                 .csrf().disable()
-                .authorizeRequests()
+                .authorizeHttpRequests()
+                .requestMatchers("/api/persona")
+                .permitAll()
                 .anyRequest()
                 .authenticated()
-                .and()
-                .httpBasic()
                 .and()
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
@@ -60,6 +62,10 @@ public class webSegurityConfing {
     @Bean
     PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
+    }
+
+    public static void main(String[] args){
+        System.out.println("pass: "+new BCryptPasswordEncoder().encode("alex123"));
     }
 
 
