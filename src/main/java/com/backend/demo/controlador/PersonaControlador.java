@@ -19,7 +19,7 @@ import java.util.List;
 public class PersonaControlador {
     private final personaRepositorio PersonaRepositorio;
     @GetMapping
-    public List<persona>listapersona(){return PersonaRepositorio.findAll();
+    public List<persona>listPersona(){return PersonaRepositorio.findAll();
     }
 
 }
